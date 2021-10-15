@@ -1,0 +1,48 @@
+<style lang="scss">
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-left {}
+
+  .img-right {
+    display: none;
+  }
+
+  .hero-main {
+    box-sizing: content-box;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    margin-top: 48px;
+    
+    & > * + * {
+      margin-top: 32px;
+    }
+  }
+</style>
+
+<section>
+  <div class="img-left">
+    <picture>
+      <img src="/assets/tablet/image-hero.png" alt="pictures of meet users">
+    </picture>
+  </div>
+
+  <div class="hero-main">
+    <h1 class="text-center">Group Chat for Everyone</h1>
+    <p class="clr-gray text-center">
+      Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
+    </p>
+
+    <div class="buttons">
+      <a href="#">Download v1.3</a>
+      <a href="#">What is it?</a>
+    </div>
+  </div>
+
+  <div class="img-right">
+
+  </div>
+</section>
