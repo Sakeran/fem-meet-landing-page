@@ -1,0 +1,68 @@
+---
+export interface Props {
+  href? : string,
+  color? : string
+}
+
+const {href, color} = Astro.props;
+
+const El = href ? "a" : "button";
+
+let classString = "btn";
+
+if (color === "primary") {
+  classString += " primary";
+} else if (color === "secondary") {
+  classString += " secondary"
+}
+
+---
+
+<style lang="scss">
+  .btn {
+    display: inline-block;
+
+    padding: 16px 30px;
+    border-radius: 30px;
+    border: 1px solid var(--clr-gray, black);
+
+    color: var(--clr-dark, black);
+    font-size: 16px;
+    font-weight: 900;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    transition: all 0.15s ease-in;
+    &:hover, &:focus {
+      color: var(--clr-gray, black);
+    }
+  }  
+
+  .primary {
+    border: none;
+    background-color: var(--clr-primary-400);
+
+    color: white;
+
+    &:hover, &:focus {
+      color: white;
+      background-color: var(--clr-primary-500);
+    }
+  }
+
+  .secondary {
+    border: none;
+    background-color: var(--clr-secondary-400);
+
+    color: white;
+
+    &:hover, &:focus {
+      color: white;
+      background-color: var(--clr-secondary-500);
+    }
+  }
+
+</style>
+
+<El {...{href}} class={classString}><slot /></El>
