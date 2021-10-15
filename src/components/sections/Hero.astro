@@ -6,16 +6,41 @@ import Button from "../Button.astro";
   section {
     display: flex;
     flex-direction: column;
+
+    @media screen and (min-width: 1350px) {
+      flex-direction: row;
+      align-items: center;
+      gap: 90px;
+    }
   }
 
-  .img-left {}
+  .img-left {
+    @media screen and (min-width: 1350px) {
+      flex-grow: 1;
+      transform: translateX(-15%);
+    }
+
+  }
 
   .img-right {
     display: none;
+
+    @media screen and (min-width: 1350px) {
+      flex-grow: 1;
+
+      display: block;
+      margin-top: 64px;
+
+      transform: translateX(15%);
+    }
   }
 
   .hero-main {
+    align-self: center;
+
     box-sizing: content-box;
+    max-width: 450px;
+
     padding-left: 24px;
     padding-right: 24px;
 
@@ -32,12 +57,18 @@ import Button from "../Button.astro";
     align-items: center;
 
     gap: 16px;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      justify-content: center;
+    }
   }
 </style>
 
 <section>
   <div class="img-left">
     <picture>
+      <source media="(min-width: 1350px)" srcset="/assets/desktop/image-hero-left.png" />
       <img src="/assets/tablet/image-hero.png" alt="pictures of meet users">
     </picture>
   </div>
@@ -55,6 +86,8 @@ import Button from "../Button.astro";
   </div>
 
   <div class="img-right">
-
+    <picture>
+      <img src="/assets/desktop/image-hero-right.png" alt="pictures of meet users">
+    </picture>
   </div>
 </section>
