@@ -1,0 +1,33 @@
+<style lang="scss">
+  div {
+    box-sizing: content-box;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+    justify-content: center;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      gap: 30px;
+    }
+
+    & > * {
+      border-radius: 8px;
+    }
+  }
+</style>
+
+<div>
+  <img src="/assets/desktop/image-woman-in-videocall.jpg" alt="woman in video call">
+  <img src="/assets/desktop/image-women-videochatting.jpg" alt="women video chatting">
+  <img src="/assets/desktop/image-men-in-meeting.jpg" alt="men in virtual meeting">
+  <img src="/assets/desktop/image-man-texting.jpg" alt="man texting on phone">
+</div>
