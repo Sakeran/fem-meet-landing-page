@@ -1,0 +1,56 @@
+---
+export interface Props {
+  content: string;
+}
+
+const {content} = Astro.props;
+---
+
+<style lang="scss">
+  .divider {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::before {
+      content: "";
+
+      display: block;
+      height: 112px;
+      width: 1px;
+
+      background-color: var(--clr-light-gray);
+    }
+
+    span {
+      position: absolute;
+      bottom: 0;
+      transform: translateY(50%);
+
+      padding: 0.625em 0.900em;
+
+      border: 1px solid var(--clr-light-gray);
+      border-radius: 100vw;
+
+      color: var(--clr-gray);
+      font-size: 16px;
+
+      background-color: var(--clr-light);
+
+
+    }
+
+    & + :global(*) {
+      padding-top: 92px;
+    }
+  }
+</style>
+
+<div>
+  <div class="divider">
+    <span>{content}</span>
+  </div>
+  <slot />
+</div>
