@@ -1,7 +1,16 @@
 ---
 import Header from "../components/sections/Header.astro";
 import Hero from "../components/sections/Hero.astro";
+import Divider from "../components/Divider.astro";
 ---
+
+<style>
+	main {
+		display: flex;
+		flex-direction: column;
+		gap: 64px;
+	}
+</style>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +31,7 @@ import Hero from "../components/sections/Hero.astro";
 	<Header />
 	<main>
 		<Hero />
-		
+		<Divider content="01" />
 
 		01
 		Built for modern use

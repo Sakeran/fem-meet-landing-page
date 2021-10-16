@@ -21,6 +21,7 @@
   --clr-dark: hsl(240, 21%, 20%);
   --clr-light: hsl(0, 0%, 98%);
   --clr-gray: hsl(240, 10%, 57%);
+  --clr-light-gray: hsl(240, 10%, 88%);
 
   // Typography
 
@@ -39,6 +40,10 @@
 }
 
 // HTML Elements
+
+body {
+  background-color: var(--clr-light);
+}
 
 h1 {
   font-weight: 900px;
