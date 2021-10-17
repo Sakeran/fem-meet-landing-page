@@ -6,6 +6,7 @@ import Button from "../Button.astro";
   section {
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 
     @media screen and (min-width: 1350px) {
       flex-direction: row;
@@ -17,7 +18,7 @@ import Button from "../Button.astro";
   .img-left {
     @media screen and (min-width: 1350px) {
       flex-grow: 1;
-      transform: translateX(-15%);
+      transform: translateX(-10%);
     }
 
   }
@@ -31,7 +32,7 @@ import Button from "../Button.astro";
       display: block;
       margin-top: 64px;
 
-      transform: translateX(15%);
+      transform: translateX(10%);
     }
   }
 
