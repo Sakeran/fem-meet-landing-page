@@ -3,8 +3,9 @@ import Header from "../components/sections/Header.astro";
 import Hero from "../components/sections/Hero.astro";
 import ImagesSection from "../components/sections/ImagesSection.astro";
 import About from "../components/sections/About.astro";
+import Footer from "../components/sections/Footer.astro";
 
-import Divider from "../components/Divider.astro";
+import WithDivider from "../components/WithDivider.astro";
 ---
 
 <style>
@@ -35,16 +36,15 @@ import Divider from "../components/Divider.astro";
 	<main>
 		<Hero />
 
-		<Divider content="01" />
-		
-		<ImagesSection />
-		<About />
+		<WithDivider content="01">
+			<ImagesSection />
+			<About />
+		</WithDivider>
 
-		02
-		Experience more together
-		Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
 
-		Download v1.3
+		<WithDivider content="02">
+			<Footer />
+		</WithDivider>
 	
 	</main>
 </body>
