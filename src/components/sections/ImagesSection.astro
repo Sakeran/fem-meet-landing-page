@@ -1,5 +1,5 @@
 <style lang="scss">
-  div {
+  .image-grid {
     box-sizing: content-box;
     padding-left: 24px;
     padding-right: 24px;
@@ -19,15 +19,28 @@
       gap: 30px;
     }
 
-    & > * {
+    img {
       border-radius: 8px;
+
     }
   }
+
 </style>
 
-<div>
-  <img src="/assets/desktop/image-woman-in-videocall.jpg" alt="woman in video call">
-  <img src="/assets/desktop/image-women-videochatting.jpg" alt="women video chatting">
-  <img src="/assets/desktop/image-men-in-meeting.jpg" alt="men in virtual meeting">
-  <img src="/assets/desktop/image-man-texting.jpg" alt="man texting on phone">
+<div class="image-grid">
+  <div>
+    <img src="/assets/desktop/image-woman-in-videocall.jpg" alt="woman in video call">
+  </div>
+
+  <div>
+    <img src="/assets/desktop/image-women-videochatting.jpg" alt="women video chatting">
+  </div>
+
+  <div>
+    <img src="/assets/desktop/image-men-in-meeting.jpg" alt="men in virtual meeting">
+  </div>
+
+  <div>
+    <img src="/assets/desktop/image-man-texting.jpg" alt="man texting on phone">
+  </div>
 </div>
