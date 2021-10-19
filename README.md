@@ -1,42 +1,15 @@
-# Astro Starter Kit: Minimal
+# fem-meet-landing-page
 
-```
-npm init astro -- --template minimal
-```
+This is a solution to the [Meet landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/meet-landing-page-rbTDS6OUR). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/snowpackjs/astro/tree/latest/examples/minimal)
+## Notes
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+(October 18th, 2021)
 
-## 🚀 Project Structure
+With this project, I think I'm starting to get the hang of developing in Astro (and of component-based development in general). The implementation of this design was mostly straightforward, with one exception: the numbered headings preceding each of the two major sections.
 
-Inside of your Astro project, you'll see the following folders and files:
+When it came time to implement the numbered headings, I first designed them as standalone components that were completely agnostic to their sibling elements, assuming I could use properties like `gap` and `margin` to control the spacing. I did this using the first instance in the mockup as my template...but if I'd paid attention to the second instance, I'd have noticed that it overlaps its associated content, a scenario in which those properties are useless to me.
 
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+It wasn't hard to solve: I simply changed my `Divider` to a `WithDivider` component that accepts the associated content as its children. Implementing the overlap became a simple matter once the presence of associated content could be assumed. The resulting markup did *look* a little weird to me at first, but it's been a while since I've developed in this way, so I might just need to get used to it. Lesson learned.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command         | Action                                      |
-|:----------------|:--------------------------------------------|
-| `npm install`   | Installs dependencies                       |
-| `npm run dev`   | Starts local dev server at `localhost:3000` |
-| `npm run build` | Build your production site to `./dist/`     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://github.com/snowpackjs/astro) or jump into our [Discord server](https://astro.build/chat).
+[The live version of my solution may be found here.](https://grumpy-pail.surge.sh/)
